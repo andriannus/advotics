@@ -1,4 +1,8 @@
 .AppBar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
   &-powered {
     align-items: flex-end;
     color: #5b5b5b;
@@ -27,39 +31,41 @@
     color: #727272;
     flex-direction: column;
   }
-}
 
-.TopBar {
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
-  height: 64px;
-  padding: 16px 32px;
-
-  &-action {
-    &.Icon {
-      padding: 8.5px 6px;
-      min-width: 24px;
-    }
+  &.TopBar {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+    height: 64px;
+    padding: 16px 32px;
   }
 
-  &-actions {
-    height: 100%;
-
-    * {
-      max-height: 100%;
-    }
-
-    .TopBar-action {
-      min-width: 32px;
-
-      &:not(:last-child) {
-        margin-right: 16px;
+  .TopBar {
+    &-action {
+      &.Icon {
+        padding: 8.5px 6px;
+        min-width: 24px;
       }
     }
-  }
 
-  &-logo {
-    > img {
-      height: 32px;
+    &-actions {
+      height: 100%;
+
+      * {
+        max-height: 100%;
+      }
+
+      .TopBar-action {
+        min-width: 32px;
+
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+    }
+
+    &-logo {
+      > img {
+        height: 32px;
+      }
     }
   }
 }

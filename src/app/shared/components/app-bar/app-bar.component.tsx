@@ -11,7 +11,7 @@ export default defineComponent({
 
   setup() {
     return (): JSX.Element => (
-      <div class="TopBar">
+      <header class="AppBar TopBar">
         <picture class="TopBar-logo">
           <source srcset="/images/webp/logo.webp" type="image/webp" />
           <img src="/images/jpeg/logo.jpeg" alt="Advotics" />
@@ -40,7 +40,7 @@ export default defineComponent({
             <img src={LogoutIcon} alt="Logout" />
           </RouterLink>
         </div>
-      </div>
+      </header>
     );
   },
 });
