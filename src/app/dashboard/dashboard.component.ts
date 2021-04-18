@@ -3,9 +3,11 @@ import { ChartConfiguration } from "chart.js";
 
 import { CHART_CONFIGURATION } from "./shared/constants/dashboard.constant";
 
+import ChevronDownIcon from "@/app/shared/assets/icons/chevron-down.png";
 import ChevronUpIcon from "@/app/shared/assets/icons/chevron-up.png";
 import HelpIcon from "@/app/shared/assets/icons/help.png";
 import ArrowDownIcon from "@/app/shared/assets/icons/arrow-down.svg";
+import CalendarIcon from "@/app/shared/assets/icons/calendar.png";
 import TrolleyImage from "@/app/shared/assets/images/trolley.svg";
 import { AdvCard } from "@/app/shared/components/card";
 import { AdvChart } from "@/app/shared/components/chart";
@@ -66,6 +68,8 @@ export default defineComponent({
     return {
       ArrowDownIcon,
       BEST_SELLING_SKU,
+      CalendarIcon,
+      ChevronDownIcon,
       ChevronUpIcon,
       HelpIcon,
       salesTurnoverRupiah,

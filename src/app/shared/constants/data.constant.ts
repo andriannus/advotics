@@ -12,7 +12,7 @@ export const BEST_SELLING_SKU = [
     sold: 81,
   },
   {
-    name: "Xiaomi Redmi Note 10",
+    name: "Vivo V20",
     price: 3499000,
     sold: 68,
   },
@@ -51,7 +51,7 @@ export const TOP_COMPETITOR_SKU = [
     sold: 41,
   },
   {
-    name: "Xiaomi Redmi Note 10",
+    name: "Vivo V20",
     price: 3499000,
     sold: 39,
   },
