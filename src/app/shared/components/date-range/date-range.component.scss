@@ -1,0 +1,102 @@
+.DateRange {
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.161);
+  color: #6a6a6a;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  height: 48px;
+  line-height: 16px;
+  justify-content: space-between;
+  padding: 14px 16px;
+  position: relative;
+
+  img {
+    width: auto;
+
+    &:first-child {
+      height: 22px;
+      margin-right: 16px;
+    }
+
+    &:last-child {
+      height: 18px;
+      margin-left: 16px;
+    }
+  }
+
+  &-canvas {
+    padding: 0 24px;
+  }
+
+  &-dialog {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.161);
+    margin-top: 4px;
+    position: absolute;
+    right: 32px;
+    z-index: 2;
+  }
+
+  &-dialogHeader {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      height: 24px;
+    }
+  }
+
+  &-dialogContent {
+    display: flex;
+    margin-top: 16px;
+  }
+
+  &-sideBar {
+    border-right: 1px solid #cdcdcd;
+    padding-right: 24px;
+  }
+
+  &-list {
+    color: #6a6a6a;
+    font-size: 12px;
+  }
+
+  &-listItem {
+    cursor: pointer;
+    padding: 8px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+}
+
+.litepicker {
+  .container__months {
+    box-shadow: none !important;
+  }
+
+  .is-in-range {
+    background-color: #e0fde5 !important;
+  }
+
+  .is-start-date,
+  .is-end-date {
+    font-weight: bold !important;
+    background-color: #aaeeb6 !important;
+    color: #289e45 !important;
+  }
+
+  .month-item {
+    padding: 0 !important;
+
+    &:first-child {
+      padding-right: 5px !important;
+    }
+
+    &:last-child {
+      padding-left: 5px !important;
+    }
+  }
+}
