@@ -1,0 +1,96 @@
+.Dashboard {
+  padding: 32px;
+
+  &-cardSubtitle {
+    color: #8c8c8c;
+    font-size: 14px;
+  }
+
+  &-cardTitle {
+    color: #4d4f6c;
+    flex-grow: 1;
+    font-size: 20px;
+  }
+
+  &-headline {
+    color: rgba(112, 112, 112, 0.77);
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  &-link {
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 4px;
+    margin-right: 16px;
+    text-decoration: underline;
+  }
+
+  &-insights {
+    align-items: center;
+    background-color: #37b04c;
+    color: #ffffff;
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    margin-top: 30px;
+    padding: 12px 16px;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  &-turnoverHeadline {
+    color: #4d4f5c;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  &-turnoverImage {
+    height: 40px;
+    width: 46px;
+  }
+
+  &-turnoverDescription {
+    align-items: center;
+    color: #8b8b8b;
+    display: flex;
+    font-size: 10px;
+    line-height: 10px;
+
+    img {
+      height: 10px;
+      margin-right: 4px;
+    }
+  }
+}
+
+.Icon {
+  height: 20px;
+  padding: 0;
+  width: auto;
+
+  &:last-child {
+    padding: 6px 0;
+  }
+}
+
+.Select {
+  appearance: none;
+  border: 1px solid #d7dae2;
+  box-shadow: 0px 2px 3px #0000000d;
+  color: #4d4f5c;
+  font-size: 12px;
+  margin-right: 8px;
+  outline: none;
+  padding: 8px 12px;
+}
+
+.is-danger {
+  color: #ff4241;
+}
