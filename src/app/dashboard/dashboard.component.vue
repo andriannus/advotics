@@ -1,17 +1,12 @@
 <template>
   <div class="Dashboard">
     <div class="Grids AlignItems-center">
-      <div class="Grid">
+      <div class="Grid-7">
         <h2 class="Dashboard-headline">Dashboard</h2>
       </div>
 
       <div class="Grid-5">
-        <div class="DateRange">
-          <img :src="CalendarIcon" alt="Calendar" />
-          <span class="MarginRight-medium">Period</span>
-          <span>11 September 2018 - 14 September 2018</span>
-          <img :src="ChevronDownIcon" alt="Chevron Down" class="Icon" />
-        </div>
+        <adv-date-range></adv-date-range>
       </div>
     </div>
 
