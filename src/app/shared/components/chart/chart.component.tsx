@@ -30,7 +30,6 @@ export default defineComponent({
     });
 
     onMounted(() => {
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       renderChart();
     });
 
@@ -38,7 +37,6 @@ export default defineComponent({
       () => props.configuration.data.datasets,
       () => {
         chart.value.destroy();
-        // eslint-disable-next-line @typescript-eslint/no-use-before-define
         renderChart();
       },
     );

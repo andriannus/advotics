@@ -36,7 +36,6 @@ export default defineComponent({
       chartConfiguration: ChartConfiguration;
       lastMonth: string;
     }>({
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       chartConfiguration: getChartDatasets(),
       lastMonth: "6",
     });
@@ -48,8 +47,6 @@ export default defineComponent({
     watch(
       () => state.lastMonth,
       (lastMonth: string) => {
-        console.log(lastMonth);
-        // eslint-disable-next-line @typescript-eslint/no-use-before-define
         state.chartConfiguration = getChartDatasets(lastMonth);
       },
     );

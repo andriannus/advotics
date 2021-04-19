@@ -29,7 +29,6 @@ export default defineComponent({
     });
 
     onMounted(() => {
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       renderLitepicker();
     });
 
@@ -91,7 +90,6 @@ export default defineComponent({
     }
 
     function closeDateRange(): void {
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       toggleDialog();
     }
 
@@ -113,7 +111,6 @@ export default defineComponent({
       ];
 
       setPeriod();
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       toggleDialog();
     }
 
