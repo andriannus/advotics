@@ -1,6 +1,7 @@
 import {
   defineComponent,
   onBeforeMount,
+  onBeforeUnmount,
   onMounted,
   PropType,
   ref,
@@ -31,6 +32,10 @@ export default defineComponent({
 
     onMounted(() => {
       renderChart();
+    });
+
+    onBeforeUnmount(() => {
+      chart.value.destroy();
     });
 
     watch(

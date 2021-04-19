@@ -2,6 +2,7 @@ import { computed, defineComponent, reactive, watch } from "vue";
 import { ChartConfiguration } from "chart.js";
 
 import { CHART_CONFIGURATION } from "./shared/constants/dashboard.constant";
+import { DashboardPageState } from "./shared/models/dashboard.model";
 
 import ArrowDownIcon from "@/app/shared/assets/icons/arrow-down.svg";
 import ChevronUpIcon from "@/app/shared/assets/icons/chevron-up.png";
@@ -32,10 +33,7 @@ export default defineComponent({
   setup() {
     const salesTurnover = 3600000;
 
-    const state = reactive<{
-      chartConfiguration: ChartConfiguration;
-      lastMonth: string;
-    }>({
+    const state = reactive<DashboardPageState>({
       chartConfiguration: getChartDatasets(),
       lastMonth: "6",
     });

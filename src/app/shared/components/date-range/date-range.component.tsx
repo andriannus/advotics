@@ -2,6 +2,8 @@ import { defineComponent, onMounted, reactive } from "@vue/runtime-core";
 import Litepicker from "litepicker";
 import { lastDayOfMonth, startOfMonth, subDays } from "date-fns";
 
+import { DATE_TIME_FORMAT } from "./date-range.constant";
+import { DateRangeComponentState } from "./date-range.model";
 import "./date-range.component.scss";
 
 import ChevronDownIcon from "@/app/shared/assets/icons/chevron-down.png";
@@ -16,16 +18,11 @@ export default defineComponent({
   },
 
   setup() {
-    const state = reactive<{
-      picker: Litepicker;
-      dateRange: string[];
-      isShown: boolean;
-      period: string;
-    }>({
-      picker: {} as Litepicker,
+    const state = reactive<DateRangeComponentState>({
       dateRange: [],
       isShown: false,
       period: "",
+      picker: {} as Litepicker,
     });
 
     onMounted(() => {
@@ -33,12 +30,13 @@ export default defineComponent({
     });
 
     function setPeriod(): void {
-      if (state.dateRange.includes("")) {
-        state.period = state.dateRange[0];
-        return;
-      }
+      const [startDate, endDate] = state.dateRange;
 
-      state.period = `${state.dateRange[0]} - ${state.dateRange[1]}`;
+      state.period = startDate;
+
+      if (endDate) {
+        state.period = `${startDate} - ${endDate}`;
+      }
     }
 
     function renderLitepicker(): void {
@@ -49,9 +47,9 @@ export default defineComponent({
       state.picker = new Litepicker({
         element,
         inlineMode: true,
-        singleMode: false,
         numberOfMonths: 2,
         numberOfColumns: 2,
+        singleMode: false,
       });
     }
 
@@ -89,25 +87,13 @@ export default defineComponent({
       state.picker.setDateRange(startDate, endDate);
     }
 
-    function closeDateRange(): void {
-      toggleDialog();
-    }
-
     function setSelectedDate(): void {
       const start = state.picker.getStartDate();
       const end = state.picker.getEndDate();
 
       state.dateRange = [
-        start?.toLocaleString("id-ID", {
-          day: "2-digit",
-          month: "long",
-          year: "numeric",
-        }) || "",
-        end?.toLocaleString("id-ID", {
-          day: "2-digit",
-          month: "long",
-          year: "numeric",
-        }) || "",
+        start?.toLocaleString("id-ID", DATE_TIME_FORMAT) || "",
+        end?.toLocaleString("id-ID", DATE_TIME_FORMAT) || "",
       ];
 
       setPeriod();
@@ -137,7 +123,7 @@ export default defineComponent({
               <span class="MarginLeft-small">Period</span>
             </div>
 
-            <button onClick={() => closeDateRange()}>⨉</button>
+            <button onClick={() => toggleDialog()}>⨉</button>
           </div>
 
           <div class="DateRange-dialogContent">
